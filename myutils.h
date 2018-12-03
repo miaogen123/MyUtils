@@ -1,7 +1,6 @@
 #pragma once
 #include<string>
 #include<functional>
-#include"globalConfig.h"
 #include<limits>
 #include<iostream>
 #include<chrono>

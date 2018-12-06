@@ -29,3 +29,5 @@ void inputUntilTrue(T& tobeInput, std::string msg, F judgeFunc){
 	}
 }
 
+//generate the str in range of a-z &A-Z
+std::string getRandStr(int length);

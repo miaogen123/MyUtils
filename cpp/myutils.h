@@ -31,3 +31,18 @@ void inputUntilTrue(T& tobeInput, std::string msg, F judgeFunc){
 
 //generate the str in range of a-z &A-Z
 std::string getRandStr(int length);
+
+  template<class T>
+  std::vector<T> slice_vector(const std::vector<T>& vec, int32_t start, int32_t end) {
+    if (start < 0 || end < 0 || start > end || end > vec.size()) {
+      return std::vector<T>{};
+    }
+    std::vector<T> temp(end - start + 1);
+    T* data = temp.data();
+    T* src = vec.data();
+    int32_t idx = 0;
+    for (int32_t i = start; i < end; i++, idx++) {
+      data[idx] = src[i];
+    }
+    return temp;
+  }
